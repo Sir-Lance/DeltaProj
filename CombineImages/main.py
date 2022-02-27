@@ -11,15 +11,6 @@ from resize_images import resize_images
     
 
 def main():
-    # #temp hardcoded images
-    # image_1 = './img/PI-R-556-47241.jpg'
-    # image_2 = './img/RD-10379.jpg'
-    # image_3 = './img/TR-18495.jpg'
-    # image_4 = './img/meirl.png'
-    # image_5 = './img/gamer.png'
-    # image_6 = './img/loveit.png'
-    # images = [image_1, image_2, image_3, image_4, image_5, image_6]
-
     # get all images in img folder
     images = [f for f in listdir('./img') if isfile(join('./img/', f))]
 
@@ -38,10 +29,6 @@ def main():
     top = join_horizontal(images_1) # get top half of output image
     bot = join_horizontal(images_2) # get bottom half of output image
     
-    # # check that images joined correctly
-    # top.show()
-    # bot.show()
-
     # join top and bottom image
     output = join_vertical(top, bot)
 
